@@ -1,0 +1,130 @@
+ 
+.packages-container {  
+  padding: 20px;
+}
+
+.packages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.package-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.package-card:hover {
+  transform: scale(1.05);
+}
+
+.card-img {
+  position: relative;
+  height: 180px;
+  overflow: hidden;
+}
+
+.card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-price {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #2990ff;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 18px; 
+}
+
+.card-body {
+  padding: 15px;
+}
+
+.card-title {
+  font-size: 20px;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.card-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  border-top: 1px solid #e0e0e0;
+  padding-top: 10px;
+}
+
+.card-info-item {
+  display: flex;
+  align-items: center;
+}
+
+.card-icon {
+  margin-right: 5px;
+  color: #2990ff;
+}
+
+.arrow-icon {
+  color: #2990ff;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.arrow-icon:hover {
+  color: #0056b3;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.page-item {
+  margin: 0 5px;
+  padding: 8px 16px;
+  background-color: #f1f1f1;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.page-item.active {
+  background-color: #2990ff;
+  color: #fff;
+}
+
+.page-item:hover {
+  background-color: #0056b3;
+  color: #fff;
+}
+.location-icon {
+  margin-right: 5px;
+  color: #555; 
+}
+
+.card-location {
+  font-size: 0.9rem;
+  color: #777;
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center; 
+}
+
+.card-description {
+  margin-top: 1rem;
+  font-size: 0.9rem; 
+  color: #555;
+}

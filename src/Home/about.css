@@ -1,0 +1,121 @@
+
+.about-section {
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    background-color: #f8f9fa;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+.about-content {
+    flex: 1;
+    padding-right: 2rem;
+}
+
+.about-heading {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    color: #2c3e50;
+    line-height: 1.2;
+}
+
+.about-text {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.about-carousel {
+    flex: 1;
+}
+
+@media screen and (max-width:576px) {
+    .about-section {
+        flex-direction: column;
+        padding: 1.5rem;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    .about-heading {
+        font-size: 2rem;
+    }
+
+    .about-text {
+        font-size: 1rem;
+    }
+
+    .about-carousel {
+        margin-top: 1rem;
+       
+    }
+}
+@media screen and (min-width:577px) and (max-width: 768px) {
+    .about-section {
+        display: block;
+        flex-direction: row;
+        padding: 2rem;
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+
+    .about-heading {
+        font-size: 2.2rem;
+    }
+
+    .about-text {
+        font-size: 1.05rem;
+    }
+
+    .about-carousel {
+        flex: 1;
+    }
+}
+@media screen and (min-width:769px) and (min-width: 992px) { 
+    .about-section {
+        padding: 2.5rem;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    .about-heading {
+        font-size: 2.5rem;
+    }
+
+    .about-text {
+        font-size: 1.1rem;
+    }
+}
+@media screen and (min-width:993px) and (max-width: 1200px) {
+    .about-section {
+        padding: 3rem;
+        margin-left: 60px;
+        margin-right: 60px;
+    }
+
+    .about-heading {
+        font-size: 2.8rem;
+    }
+
+    .about-text {
+        font-size: 1.2rem;
+    }
+} 
+@media screen and(min-width:1201px) and (max-width: 1400px) {
+    .about-section {
+        padding: 3.5rem;
+        margin-left: 70px;
+        margin-right: 70px;
+    }
+
+    .about-heading {
+        font-size: 3rem;
+    }
+
+    .about-text {
+        font-size: 1.3rem;
+    }
+} 

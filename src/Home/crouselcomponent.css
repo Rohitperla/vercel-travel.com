@@ -1,0 +1,134 @@
+
+#carouselExampleCaptions {
+  width: 90%; 
+  height: 600px; 
+  margin: auto;
+  overflow: hidden;
+}
+
+
+.carousel-item {
+  height: 100%; 
+  position: relative;
+}
+
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+
+
+.carousel-caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+  
+}
+
+
+.carousel-caption h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+
+.explore-button {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+
+@media screen and (max-width: 576px) { 
+  #carouselExampleCaptions {
+    height: 200px; 
+    
+    
+     
+  }
+
+  .carousel-caption h1 {
+    font-size: 2rem;
+    display: none; 
+    
+  }
+
+  .explore-button {
+    position: absolute;
+    top: 18px;
+    left: 7px;
+    right: 5px;
+    
+    
+    padding: 8px 18px;
+    font-size: 0.95rem; 
+  }
+}
+
+@media screen and (min-width:577) and (max-width: 768px) {
+  #carouselExampleCaptions {
+    height: 500px; 
+  }
+
+  .carousel-caption h1 {
+    font-size: 2.25rem;
+  }
+
+  .explore-button {
+    padding: 8px 16px;
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width:769px) and (max-width: 992px) { 
+  #carouselExampleCaptions {
+    height: 550px;
+  }
+
+  .carousel-caption h1 {
+    font-size: 2.5rem;
+  }
+
+  .explore-button {
+    padding: 10px 20px;
+    font-size: 1.05rem; 
+  }
+}
+@media screen and (min-width:993px) and (min-width: 1200px) { 
+  #carouselExampleCaptions {
+    height: 600px; 
+  }
+
+  .carousel-caption h1 {
+    font-size: 2.75rem;
+  }
+
+  .explore-button {
+    padding: 12px 22px;
+    font-size: 1.1rem;
+  }
+}
+@media screen and (min-width:1201px) and (min-width: 1400px) {
+  #carouselExampleCaptions {
+    height: 650px; 
+  }
+
+  .carousel-caption h1 {
+    font-size: 3rem;
+  }
+
+  .explore-button {
+    padding: 14px 24px;
+    font-size: 1.2rem; 
+  }
+}
+

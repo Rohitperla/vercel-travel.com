@@ -1,0 +1,15 @@
+
+.package-booked-container {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .package-booked-container h2 {
+    margin-bottom: 20px;
+  }
+  
+  .package-booked-container .btn {
+    padding: 10px 20px;
+    font-size: 18px; 
+  }
+  
