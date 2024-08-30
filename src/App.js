@@ -1,4 +1,3 @@
-import './App.css';
 import Navbar from './common/navbar';
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import Packages from './pages/packages/packages';
@@ -31,7 +30,7 @@ function App() {
     <Route path="/myTrips" element={<MyTrips/>}/>
     <Route path="/blog" element={<BlogListPage />} />
     <Route path="/blog/:id" element={<BlogDetailsPage/>} />
-    <Route path='/contact' element={<ContactMe/>}/>
+    <Route path='/contact' element={<ContactMe/>}/> 
     
 
     

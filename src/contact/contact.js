@@ -19,7 +19,7 @@ const ContactMe = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Display SweetAlert2 on form submission
+    
     Swal.fire({
       title: 'Success!',
       text: 'Your details have been submitted! You will receive a call in the next 5 minutes',
@@ -27,7 +27,7 @@ const ContactMe = () => {
       icon: 'success',
       confirmButtonText: 'OK'
     }).then(() => {
-      // Navigate to the success page
+  
       navigate('/contact');
     });
   };

@@ -30,7 +30,7 @@ const PackageReview = () => {
 
     const trips = JSON.parse(localStorage.getItem('bookedTrips')) || [];
     
-    // Check if the trip is already booked to prevent duplicates
+    
     const isAlreadyBooked = trips.some(trip => trip.id === bookedTrip.id);
 
     if (!isAlreadyBooked) {
@@ -38,7 +38,7 @@ const PackageReview = () => {
       localStorage.setItem('bookedTrips', JSON.stringify(trips));
     }
 
-    // Navigate to the package booked page
+    
     navigate('/package-booked');  
   };
 

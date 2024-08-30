@@ -3,17 +3,17 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import './allPackages.css';
 import { FaArrowRight, FaClock, FaMapMarkerAlt } from 'react-icons/fa';  
-import { MdPeople } from 'react-icons/md';  
+import { MdPeople } from 'react-icons/md';   
 
-const AllPackages = ({ searchQuery, searchData }) => {
+const AllPackages = ({ searchQuery }) => { 
   const [allTours, setAllTours] = useState([]);
-  const [currentPage, setCurrentPage] = useState(1);
-  const [itemsPerPage] = useState(6);
+  const [currentPage, setCurrentPage] = useState(1); 
+  const [itemsPerPage] = useState(6); 
 
   const fetchTours = async () => {
     try {
       const response = await axios.get('https://travel-com-lk3o.onrender.com/Tours');
-      const data = await response.data;
+      const data = response.data;  
       setAllTours(data);
     } catch (err) {
       console.log(err);
@@ -50,9 +50,13 @@ const AllPackages = ({ searchQuery, searchData }) => {
       <div className="packages-grid">
         {currentIndianTours.length > 0 ? (
           currentIndianTours.map(pkg => (
-            <div className="package-card" key={pkg.id}>
+            <div className="package-card" key={pkg.id}> 
               <div className="card-img"> 
-                <img src={pkg.image} alt={pkg.name} />
+                <Link 
+                  to={{ pathname: `/packages/${pkg.id}`, state: { searchData: searchQuery } }} // Pass searchQuery instead of searchData
+                >
+                  <img src={pkg.image} alt={pkg.name} />
+                </Link>
                 <div className="card-price">
                   ₹{pkg.price}
                 </div>
@@ -76,7 +80,7 @@ const AllPackages = ({ searchQuery, searchData }) => {
                     <span>{pkg.people}/10</span>
                   </div>
                   <Link 
-                    to={{ pathname: `/packages/${pkg.id}`, state: { searchData: searchData } }} 
+                    to={{ pathname: `/packages/${pkg.id}`, state: { searchData: searchQuery } }} // Pass searchQuery instead of searchData
                     className="arrow-icon"
                   >
                     <FaArrowRight />
@@ -96,7 +100,11 @@ const AllPackages = ({ searchQuery, searchData }) => {
           currentInternationalTours.map(pkg => (
             <div className="package-card" key={pkg.id}>
               <div className="card-img">
-                <img src={pkg.image} alt={pkg.name} />
+                <Link 
+                  to={{ pathname: `/packages/${pkg.id}`, state: { searchData: searchQuery } }} // Pass searchQuery instead of searchData
+                >
+                  <img src={pkg.image} alt={pkg.name} />
+                </Link>
                 <div className="card-price">
                   ₹{pkg.price}
                 </div>
@@ -120,7 +128,7 @@ const AllPackages = ({ searchQuery, searchData }) => {
                     <span>{pkg.people}/10</span>
                   </div>
                   <Link 
-                    to={{ pathname: `/packages/${pkg.id}`, state: { searchData: searchData } }} 
+                    to={{ pathname: `/packages/${pkg.id}`, state: { searchData: searchQuery } }} // Pass searchQuery instead of searchData
                     className="arrow-icon"
                   >
                     <FaArrowRight />
@@ -134,12 +142,12 @@ const AllPackages = ({ searchQuery, searchData }) => {
         )}
       </div>
 
-      <div className="pagination">
+      <div className="pagination"> 
         {Array.from({ length: totalPages }, (_, index) => (
           <button
             key={index + 1}
             onClick={() => paginate(index + 1)}
-            className={`page-item ${index + 1 === currentPage ? 'active' : ''}`}
+            className={`page-item ${index + 1 === currentPage ? 'active' : ''}`} 
           >
             {index + 1}
           </button>
@@ -149,4 +157,4 @@ const AllPackages = ({ searchQuery, searchData }) => {
   );
 };
 
-export default AllPackages;
+export default AllPackages;  
