@@ -12,7 +12,7 @@ const Packages = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
+    const timer = setTimeout(() => { 
       setLoading(false);
     }, 2000); 
 
